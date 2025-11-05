@@ -173,6 +173,19 @@ public class NumerosRomanosTest
         resultado.Should().Be("XIV"); 
     }
     
+    [Fact]
+    public void Si_NumeroIngresadoEsDiezYOcho_Debe_ConvertirAXVIII()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(18);
+        
+        //Assert
+        resultado.Should().Be("XVIII"); 
+    }
+
     
 }
 
