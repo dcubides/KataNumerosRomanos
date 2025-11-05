@@ -126,6 +126,11 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 8)
+        {
+            return "VIII";
+        }
+        
         if (numero == 7)
         {
             return "VII";
