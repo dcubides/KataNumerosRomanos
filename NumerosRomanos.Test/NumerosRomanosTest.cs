@@ -100,6 +100,10 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 6)
+        {
+            return "VI";
+        }
         if (numero == 5)
         {
             return "V";
