@@ -153,44 +153,35 @@ public class NumeroRomano
     public string Convertir(int numero)
     {
         if (numero == 10)
-        {
             return "X";
-        }
         
         if (numero == 9)
-        {
             return "IX";
-        }
         
         if (numero == 8)
-        {
             return "VIII";
-        }
         
         if (numero == 7)
-        {
             return "VII";
-        }
+        
         if (numero == 6)
-        {
             return "VI";
-        }
+        
         if (numero == 5)
-        {
             return "V";
-        }
 
         if (numero == 4)
-        {
             return "IV";
-        }
+        
         if (numero == 2)
             return "II";
+        
         if (numero == 3)
             return "III";
-       if (numero == 1)
+       
+        if (numero == 1)
             return "I";
        
-       return "";
+        return "";
     }
 }
