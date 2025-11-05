@@ -48,6 +48,8 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 0)
+            return "";
         if (numero == 2)
             return "II";
         return "I";
