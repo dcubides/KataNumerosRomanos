@@ -68,6 +68,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("IV");  
     }
+    
+    [Fact]
+    public void Si_NumeroIngresadoEsCinco_Debe_ConvertirAV()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(5);
+        
+        //Assert
+        resultado.Should().Be("V");  
+    }
 }
 
 public class NumeroRomano
