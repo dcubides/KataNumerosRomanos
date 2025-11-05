@@ -81,6 +81,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("V");  
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsSeis_Debe_ConvertirAVI()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(6);
+        
+        //Assert
+        resultado.Should().Be("VI");  
+    }
 }
 
 public class NumeroRomano
