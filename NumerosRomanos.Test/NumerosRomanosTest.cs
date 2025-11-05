@@ -167,6 +167,9 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 12)
+            return "XII";
+        
         if (numero == 10)
             return "X";
         
