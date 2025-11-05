@@ -5,7 +5,7 @@ namespace NumerosRomanos.Test;
 public class NumerosRomanosTest
 {
     [Fact]
-    public void Si_NumeroIngresadoEsUno_Debe_ConvertirAUno()
+    public void Si_NumeroIngresadoEsUno_Debe_ConvertirAI()
     {
         //Arrange
         var numeroRomano = new NumeroRomano();
@@ -14,14 +14,14 @@ public class NumerosRomanosTest
         string resultado = numeroRomano.Convertir(1);
 
         //Assert
-        resultado.Should().Be("1");
+        resultado.Should().Be("I");
     }
 }
 
 public class NumeroRomano
 {
-    public string Convertir(int i)
+    public string Convertir(int numero)
     {
-        throw new NotImplementedException();
+        
     }
 }
