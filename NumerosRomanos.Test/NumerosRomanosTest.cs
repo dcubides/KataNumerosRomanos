@@ -87,6 +87,11 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 5)
+        {
+            return "V";
+        }
+
         if (numero == 4)
         {
             return "IV";
