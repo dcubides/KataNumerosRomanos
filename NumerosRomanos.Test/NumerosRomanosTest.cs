@@ -133,6 +133,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("IX"); 
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsDiez_Debe_ConvertirAX()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(10);
+        
+        //Assert
+        resultado.Should().Be("X"); 
+    }
 }
 
 public class NumeroRomano
