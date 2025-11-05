@@ -186,6 +186,18 @@ public class NumerosRomanosTest
         resultado.Should().Be("XVIII"); 
     }
 
+    [Fact]
+    public void Si_NumeroIngresadoEsDiezYNueve_Debe_ConvertirAXIX()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(19);
+        
+        //Assert
+        resultado.Should().Be("XIX"); 
+    }
     
 }
 
