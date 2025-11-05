@@ -16,6 +16,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("I");
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsDos_Debe_ConvertirAII()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(2);
+        
+        //Assert
+        resultado.Should().Be("II");
+    }
 }
 
 public class NumeroRomano
