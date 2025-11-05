@@ -120,12 +120,30 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("VIII"); 
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsNueve_Debe_ConvertirAIX()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(9);
+        
+        //Assert
+        resultado.Should().Be("IX"); 
+    }
 }
 
 public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 9)
+        {
+            return "IX";
+        }
+        
         if (numero == 8)
         {
             return "VIII";
