@@ -55,6 +55,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("III"); 
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsCuatro_Debe_ConvertirAIV()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(4);
+        
+        //Assert
+        resultado.Should().Be("IV");  
+    }
 }
 
 public class NumeroRomano
