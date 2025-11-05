@@ -198,6 +198,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("XIX"); 
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsVeinte_Debe_ConvertirAXX()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+
+        //Act
+        string resultado = numeroRomano.Convertir(20);
+
+    //Assert
+        resultado.Should().Be("XX"); 
+    }
     
 }
 
