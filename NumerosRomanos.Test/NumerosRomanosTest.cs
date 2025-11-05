@@ -107,6 +107,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("VII");  
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsOcho_Debe_ConvertirAVIII()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(8);
+        
+        //Assert
+        resultado.Should().Be("VIII"); 
+    }
 }
 
 public class NumeroRomano
