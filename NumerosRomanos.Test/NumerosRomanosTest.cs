@@ -5,6 +5,19 @@ namespace NumerosRomanos.Test;
 public class NumerosRomanosTest
 {
     [Fact]
+    public void Si_NumeroIngresadoEsCero_Debe_ConvertirAVacio()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(0);
+        
+        //Assert
+        resultado.Should().Be(""); 
+    }
+    
+    [Fact]
     public void Si_NumeroIngresadoEsUno_Debe_ConvertirAI()
     {
         //Arrange
@@ -31,19 +44,6 @@ public class NumerosRomanosTest
     }
 
     [Fact]
-    public void Si_NumeroIngresadoEsCero_Debe_ConvertirAVacio()
-    {
-        //Arrange
-        var numeroRomano = new NumeroRomano();
-        
-        //Act
-        string resultado = numeroRomano.Convertir(0);
-        
-        //Assert
-        resultado.Should().Be(""); 
-    }
-
-    [Fact]
     public void Si_NumeroIngresadoEsTres_Debe_ConvertirAIII()
     {
         //Arrange
@@ -61,12 +61,14 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
-        if (numero == 3)
-            return "III";
-        if (numero == 0)
-            return "";
+      
         if (numero == 2)
             return "II";
-        return "I";
+        if (numero == 3)
+            return "III";
+       if (numero == 1)
+            return "I";
+       
+       return "";
     }
 }
