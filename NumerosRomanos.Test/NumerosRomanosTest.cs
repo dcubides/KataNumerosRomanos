@@ -146,6 +146,21 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("X"); 
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsDoce_Debe_ConvertirAXII()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(12);
+        
+        //Assert
+        resultado.Should().Be("XII"); 
+    }
+    
+    
 }
 
 public class NumeroRomano
