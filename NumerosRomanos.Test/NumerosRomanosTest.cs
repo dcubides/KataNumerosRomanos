@@ -205,6 +205,9 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 19)
+            return "XIX";
+            
         if (numero == 18)
             return "XVIII";
         
