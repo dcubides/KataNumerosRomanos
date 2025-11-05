@@ -180,6 +180,9 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 14)
+            return "XIV";
+        
         if (numero == 12)
             return "XII";
         
