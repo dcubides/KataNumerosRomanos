@@ -94,6 +94,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("VI");  
     }
+    
+    [Fact]
+    public void Si_NumeroIngresadoEsSiete_Debe_ConvertirAVII()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(7);
+        
+        //Assert
+        resultado.Should().Be("VI");  
+    }
 }
 
 public class NumeroRomano
