@@ -29,6 +29,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("II");
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsCero_Debe_ConvertirAVacio()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(0);
+        
+        //Assert
+        resultado.Should().Be(""); 
+    }
 }
 
 public class NumeroRomano
