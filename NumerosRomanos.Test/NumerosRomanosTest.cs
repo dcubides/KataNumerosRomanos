@@ -42,6 +42,19 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be(""); 
     }
+
+    [Fact]
+    public void Si_NumeroIngresadoEsTres_Debe_ConvertirAIII()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(3);
+        
+        //Assert
+        resultado.Should().Be("III"); 
+    }
 }
 
 public class NumeroRomano
