@@ -61,6 +61,8 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 3)
+            return "III";
         if (numero == 0)
             return "";
         if (numero == 2)
