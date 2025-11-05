@@ -105,7 +105,7 @@ public class NumerosRomanosTest
         string resultado = numeroRomano.Convertir(7);
         
         //Assert
-        resultado.Should().Be("VI");  
+        resultado.Should().Be("VII");  
     }
 }
 
@@ -113,6 +113,10 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 7)
+        {
+            return "VII";
+        }
         if (numero == 6)
         {
             return "VI";
