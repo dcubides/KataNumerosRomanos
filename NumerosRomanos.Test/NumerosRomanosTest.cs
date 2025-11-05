@@ -146,6 +146,20 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("X"); 
     }
+    
+    [Fact]
+    public void Si_NumeroIngresadoEsOnce_Debe_ConvertirAXI()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+
+        //Act
+        string resultado = numeroRomano.Convertir(11);
+
+        //Assert
+        resultado.Should().Be("XI"); 
+    }
+
 
     [Fact]
     public void Si_NumeroIngresadoEsDoce_Debe_ConvertirAXII()
@@ -211,6 +225,7 @@ public class NumerosRomanosTest
         //Assert
         resultado.Should().Be("XX"); 
     }
+
     
 }
 
@@ -233,6 +248,9 @@ public class NumeroRomano
         if (numero == 12)
             return "XII";
         
+        if (numero == 11)
+            return "XI";
+        
         if (numero == 10)
             return "X";
         
@@ -254,12 +272,11 @@ public class NumeroRomano
         if (numero == 4)
             return "IV";
         
+        if (numero == 3)
+            return "III";
         if (numero == 2)
             return "II";
         
-        if (numero == 3)
-            return "III";
-       
         if (numero == 1)
             return "I";
        
