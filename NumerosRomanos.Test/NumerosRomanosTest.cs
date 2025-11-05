@@ -152,6 +152,11 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 10)
+        {
+            return "X";
+        }
+        
         if (numero == 9)
         {
             return "IX";
