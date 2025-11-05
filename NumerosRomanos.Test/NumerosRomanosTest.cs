@@ -160,6 +160,19 @@ public class NumerosRomanosTest
         resultado.Should().Be("XII"); 
     }
     
+    [Fact]
+    public void Si_NumeroIngresadoEsCatorce_Debe_ConvertirAXIV()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+        
+        //Act
+        string resultado = numeroRomano.Convertir(14);
+        
+        //Assert
+        resultado.Should().Be("XIV"); 
+    }
+    
     
 }
 
