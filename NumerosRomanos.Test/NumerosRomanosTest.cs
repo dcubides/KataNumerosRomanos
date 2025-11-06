@@ -257,28 +257,17 @@ public class NumeroRomano
         if (numero == 9)
             return "IX";
         
-        if (numero == 8)
-            return "VIII";
+        if (numero >= 5 && numero <= 8)
+            return "V" + new string('I', numero - 5);
         
-        if (numero == 7)
-            return "VII";
-        
-        if (numero == 6)
-            return "VI";
-        
-        if (numero == 5)
-            return "V";
 
         if (numero == 4)
             return "IV";
         
-        if (numero == 3)
-            return "III";
-        if (numero == 2)
-            return "II";
+        if (numero < 4)
+            return new string('I', numero);
+
         
-        if (numero == 1)
-            return "I";
        
         return "";
     }
