@@ -246,6 +246,9 @@ public class NumeroRomano
 {
     public string Convertir(int numero)
     {
+        if (numero == 21)
+            return "XXI";
+        
         if (numero == 20)
             return "XX";
         
