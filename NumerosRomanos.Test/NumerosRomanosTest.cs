@@ -226,6 +226,19 @@ public class NumerosRomanosTest
         resultado.Should().Be("XX"); 
     }
 
+    [Fact]
+    public void Si_NumeroIngresadoEsVeintiYUno_Debe_ConvertirAXXI()
+    {
+        //Arrange
+        var numeroRomano = new NumeroRomano();
+
+        //Act
+        string resultado = numeroRomano.Convertir(21);
+
+        //Assert
+        resultado.Should().Be("XXI"); 
+    }
+
     
 }
 
